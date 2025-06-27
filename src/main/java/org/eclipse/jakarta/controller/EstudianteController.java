@@ -33,4 +33,12 @@ public class EstudianteController {
         return Response.ok().status(Response.Status.OK).entity(est).build();
     }
 
+    @Path("/{id}")
+    @GET
+    @Produces("application/json")
+    public Response getEstudiante(@PathParam("id") String id){
+        Estudiante resp = this.estudianteServ.get(id);
+        return Response.ok().status(Response.Status.OK).entity(resp).build();
+    }
+
 }

@@ -10,9 +10,21 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
+    private String id;
+
     private String nombre;
 
     private String apellido;
+
+    private int edad;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public int getEdad() {
         return edad;
@@ -37,9 +49,5 @@ public class Estudiante {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    private int edad;
-
-
 
 }

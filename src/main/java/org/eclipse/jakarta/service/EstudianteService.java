@@ -10,4 +10,6 @@ public interface EstudianteService {
 
     List<Estudiante> get();
 
+    Estudiante get(String id);
+
 }

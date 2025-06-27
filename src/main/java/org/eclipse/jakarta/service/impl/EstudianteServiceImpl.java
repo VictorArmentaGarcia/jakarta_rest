@@ -20,4 +20,9 @@ public class EstudianteServiceImpl implements EstudianteService {
     public List<Estudiante> get() {
         return listEstudiante;
     }
+
+    @Override
+    public Estudiante get(String id) {
+        return listEstudiante.stream().filter(e->e.getId().equals(id)).findAny().orElse(new Estudiante());
+    }
 }
