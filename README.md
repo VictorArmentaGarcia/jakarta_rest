@@ -9,7 +9,11 @@ is not actually needed. You may first need to execute `chmod +x mvnw`.
 
 ```
 ./mvnw clean package wildfly:run
+
+./mvnw clean package wildfly:dev
 ```
 
 Once the runtime starts, you can access the project at [http://localhost:8080/jakartaee_rest](http://localhost:8080/jakartaee_rest).
+
+http://localhost:8080/jakartaee_rest/rest/estudiante
 
