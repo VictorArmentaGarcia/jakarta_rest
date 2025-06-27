@@ -22,7 +22,13 @@ public class EstudianteServiceImpl implements EstudianteService {
     }
 
     @Override
-    public Estudiante get(String id) {
-        return listEstudiante.stream().filter(e->e.getId().equals(id)).findAny().orElse(new Estudiante());
+    public Estudiante get(int id) {
+        return listEstudiante.stream().filter(e->e.getId() == id).findAny().orElse(new Estudiante());
+    }
+
+    @Override
+    public boolean deleteById(int id) {
+        listEstudiante.removeIf(e->e.getId() == id);
+        return true;
     }
 }

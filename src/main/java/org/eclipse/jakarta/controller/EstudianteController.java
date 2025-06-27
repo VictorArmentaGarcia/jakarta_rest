@@ -36,8 +36,16 @@ public class EstudianteController {
     @Path("/{id}")
     @GET
     @Produces("application/json")
-    public Response getEstudiante(@PathParam("id") String id){
+    public Response getEstudiante(@PathParam("id") int id){
         Estudiante resp = this.estudianteServ.get(id);
+        return Response.ok().status(Response.Status.OK).entity(resp).build();
+    }
+
+    @Path("/{id}")
+    @DELETE
+    @Produces("application/json")
+    public Response deleteEstudiante(@PathParam("id") int id){
+        boolean resp = this.estudianteServ.deleteById(id);
         return Response.ok().status(Response.Status.OK).entity(resp).build();
     }
 

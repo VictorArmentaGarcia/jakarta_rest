@@ -10,6 +10,8 @@ public interface EstudianteService {
 
     List<Estudiante> get();
 
-    Estudiante get(String id);
+    Estudiante get(int id);
+
+    boolean deleteById(int id);
 
 }

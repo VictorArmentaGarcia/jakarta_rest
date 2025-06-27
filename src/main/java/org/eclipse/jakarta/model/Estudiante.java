@@ -4,13 +4,14 @@ public class Estudiante {
 
     public Estudiante(){}
 
-    public Estudiante(int edad, String apellido, String nombre) {
+    public Estudiante(int id, int edad, String apellido, String nombre) {
+        this.id = id;
         this.edad = edad;
         this.apellido = apellido;
         this.nombre = nombre;
     }
 
-    private String id;
+    private int id;
 
     private String nombre;
 
@@ -18,11 +19,11 @@ public class Estudiante {
 
     private int edad;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
